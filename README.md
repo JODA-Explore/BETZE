@@ -52,9 +52,18 @@ The following command will generate an expert user session and translate the que
 betze generate --joda-host "http://localhost:5632" --preset expert --mongo-file "mongo.js" datasets.json
 ```
 
+### Docker
+The generator is also available as a [Docker](https://www.docker.com/) container.
+The [image](https://github.com/JODA-Explore/BETZE/pkgs/container/betze%2Fbetze) is available in our GitHub repository.
+To get started, simply run:
+
+```bash
+docker run --rm ghcr.io/joda-explore/betze/betze:latest
+```
+
 #### Utility scripts
 To further improve the usability of the program, we also provide a few utility scripts.
-These scripts use [Docker](https://www.docker.com/) to run the generator with all the required dependencies without installing them.
+These scripts use Docker to run the generator with all the required dependencies without installing them.
 You can create benchmark queries with a single script invocation without installing or analyzing anything if you have Docker installed.
 
 The `generate_queries.sh` script only takes a directory containing one line-separated JSON file per dataset and analyzes them using a [JODA docker container](https://github.com/JODA-Explore/JODA/pkgs/container/JODA%2Fjoda). 
