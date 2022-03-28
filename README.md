@@ -19,12 +19,12 @@ To do so, simply add it as a module to your `go.mod` file.
 
 ### CLI
 This repository also contains a ready-to-use CLI tool to analyze data and generate benchmarks.
-To get more information about the usage of the CLI, execute the `cmd/explorer` with the `-h` flag.
+To get more information about the usage of the CLI, execute the `cmd/betze` with the `-h` flag.
 But generally creating a benchmark is a two step process.
 
 First the dataset has to be fetched and analyzed using the following command:
 ```
-explorer fetch-dataset [command options] <Analytics provider {JODA}> [<sources ...>]
+betze fetch-dataset [command options] <Analytics provider {JODA}> [<sources ...>]
 ```
 This will fetch an analyzed dataset from the analytics provider and store it in a `datasets.json` file.
 The filename and location can be changed with the `--file` option.
@@ -32,12 +32,12 @@ Currently, only the `JODA` provider is supported.
 It will fetch any dataset currently imported into a running JODA instance.
 If you have a JODA server running with imported datasets you can create the analytics file with:
 ```
-explorer fetch-dataset --joda-host "http://localhost:5632" JODA
+betze fetch-dataset --joda-host "http://localhost:5632" JODA
 ```
 
 After you analyzed your dataset you can generate a benchmark session with the following command:
 ```
-explorer generate [command options] <datasets.json>
+betze generate [command options] <datasets.json>
 ```
 
 This will generate a benchmark session with the default settings based on the analytics data in the `datasets.json` file.
@@ -49,7 +49,7 @@ But the most important ones are:
 
 The following command will generate an expert user session and translate the queries to MongoDB commands and store them in the `mongo.js` file:
 ```
-explorer generate --joda-host "http://localhost:5632" --preset expert --mongo-file "mongo.js" datasets.json
+betze generate --joda-host "http://localhost:5632" --preset expert --mongo-file "mongo.js" datasets.json
 ```
 
 #### Utility scripts
