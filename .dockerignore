@@ -1,0 +1,8 @@
+Dockerfile
+.vscode
+target
+.git
+.gitignore
+benchmark_queries.sh
+generate_queries.sh
+benchmarking
