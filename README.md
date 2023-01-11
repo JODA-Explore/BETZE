@@ -8,6 +8,7 @@ Currently the following systems are supported to be benchmarked:
  - [PostgreSQL](https://www.postgresql.org/) - a relational database with JSON capabilities
  - [MongoDB](https://www.mongodb.com/) - a document database
  - [JQ](https://stedolan.github.io/jq/) - a CLI tool for handling JSON files
+ - [Spark](https://spark.apache.org/) - a distributed data processing framework
 
 
 ## Usage
