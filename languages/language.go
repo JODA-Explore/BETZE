@@ -5,6 +5,7 @@ import (
 	"github.com/JODA-Explore/BETZE/languages/jq"
 	"github.com/JODA-Explore/BETZE/languages/mongodb"
 	"github.com/JODA-Explore/BETZE/languages/postgres"
+	"github.com/JODA-Explore/BETZE/languages/spark"
 	"github.com/JODA-Explore/BETZE/query"
 )
 
@@ -31,6 +32,7 @@ func LanguageIndex() []interface{ Language } {
 		jq.Jq{},
 		mongodb.MongoDB{},
 		postgres.Postgres{},
+		spark.Spark{},
 		joda.Joda{},
 	}
 }
