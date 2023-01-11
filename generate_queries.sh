@@ -52,7 +52,7 @@ docker run --rm --add-host=host.docker.internal:host-gateway -v "$query_analyze_
 
 # Generate queryset
 echo "=== (5) Generate queryset ==="
-docker run --rm --add-host=host.docker.internal:host-gateway -v "$query_analyze_dir:/data" betze generate $seed "${@:4}" --betze-file /data/betze.json --mongo-file /data/mongo.js --joda-file /data/queries.joda --jq-file /data/jq.sh --psql-file /data/postgres.sql --joda-host http://host.docker.internal:5632 /data/dataset.json || exit 1
+docker run --rm --add-host=host.docker.internal:host-gateway -v "$query_analyze_dir:/data" betze generate $seed "${@:4}" --betze-file /data/betze.json --mongo-file /data/mongo.js --joda-file /data/queries.joda --jq-file /data/jq.sh --psql-file /data/postgres.sql --spark-file /data/spark.sc --joda-host http://host.docker.internal:5632 /data/dataset.json || exit 1
 
 # Stop JODA Server
 echo "=== (6) Stop JODA Server ==="
