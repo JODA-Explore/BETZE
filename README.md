@@ -8,6 +8,7 @@ Currently the following systems are supported to be benchmarked:
  - [PostgreSQL](https://www.postgresql.org/) - a relational database with JSON capabilities
  - [MongoDB](https://www.mongodb.com/) - a document database
  - [JQ](https://stedolan.github.io/jq/) - a CLI tool for handling JSON files
+ - [Spark](https://spark.apache.org/) - a distributed data processing framework
 
 
 ## Usage
@@ -95,3 +96,19 @@ To continue our example, the following command will execute our previously gener
 We also included the generator in the JODA web interface.
 For ease of use, this interface is available as a [docker image](https://github.com/orgs/JODA-Explore/packages/container/package/joda-web).
 
+
+# Citation
+If you want to cite this project in your research, please use our ICDE 2022 paper.
+
+## Bibtex:
+
+```
+@inproceedings{betzeicde2022,
+  author    = {Nico Sch{\"{a}}fer and
+               Sebastian Michel},
+  title     = {BETZE: Benchmarking Data Exploration Tools with (Almost) Zero Effort},
+  booktitle = {38th {IEEE} International Conference on Data Engineering, {ICDE} 2022,
+               (Virtual) Kuala Lumpur, Malaysia, May 9-12, 2022},
+  year      = {2022}
+}
+```
